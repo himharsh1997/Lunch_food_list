@@ -10,10 +10,11 @@
 </head>
   <script src="app.js" type="text/javasctipt"></script>
 <body>
- <div ng-app="checkker" class="container">
+ <div ng-app="checkker" class="container" ng-controller="mycontrol">
 <h2>Give list of food you like to eat in lunch</h2>
 <input ng-model="name" placeholder="list comma separated dishes you usually have for lunch" class="well">
 <button ng-click="checkf()" class="btn-info">Check If Too Much</button>
+  <p>{{name}}</p>
 <h3>Note: </h3><p> We do not consider an empty item, i.e., , , as an item</p>
 </div>
   </body>
