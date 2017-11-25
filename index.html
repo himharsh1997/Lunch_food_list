@@ -9,7 +9,8 @@
     </script>
 </head>
   <script src="app.js">
-   angular.module('checkker',[])
+   require(['angular'],function($,angular){
+     angular.module('checkker',[])
 .controller('mycontrol',function($scope){
 $scope.name="";
 $scope.checkf=function(){
@@ -31,7 +32,8 @@ else if(this.name!=""||this.name==" ")
  }
 
 }
-});
+});})
+ 
 </script>
 <body>
  <div ng-app="checkker" class="container">
