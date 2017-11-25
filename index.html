@@ -8,7 +8,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
     </script>
 </head>
-  <script src="app.js" type="text/javasctipt"></script>
+  <script>
+ angular.module('checkker',[])
+.controller('mycontrol',function($scope){
+$scope.name="";
+$scope.checkf=function(){
+ if(this.name==""||this.name==" ")
+ {
+   this.name="Please enter data first";
+  }
+else if(this.name!=""||this.name==" ")
+{
+    var x=this.name.split(",");
+    var l=x.length;
+     if(l>=3)
+     {
+      this.name="Enjoy!";
+      }  
+     else{
+         this.name="Too much!";
+       }
+ }
+
+}
+});</script>
 <body>
  <div ng-app="checkker" class="container" ng-controller="mycontrol">
 <h2>Give list of food you like to eat in lunch</h2>
