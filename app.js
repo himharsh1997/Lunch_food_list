@@ -1,3 +1,4 @@
+require(['angular'],function($,angular){
 angular.module('checkker',[])
 .controller('mycontrol',function($scope){
 $scope.name="";
@@ -21,3 +22,5 @@ else if(this.name!=""||this.name==" ")
 
 }
 });
+
+})
