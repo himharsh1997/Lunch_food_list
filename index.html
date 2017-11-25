@@ -8,36 +8,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
     </script>
 </head>
-  <script>
- angular.module('checkker',[])
-.controller('mycontrol',function($scope){
-$scope.name="";
-$scope.checkf=function(){
- if(this.name==""||this.name==" ")
- {
-   this.name="Please enter data first";
-  }
-else if(this.name!=""||this.name==" ")
-{
-    var x=this.name.split(",");
-    var l=x.length;
-     if(l>=3)
-     {
-      this.name="Enjoy!";
-      }  
-     else{
-         this.name="Too much!";
-       }
- }
-
-}
-});</script>
+  <script src="">
+</script>
 <body>
  <div ng-app="checkker" class="container">
 <h2>Give list of food you like to eat in lunch</h2>
 <input ng-model="name" placeholder="list comma separated dishes you usually have for lunch" class="well">
 <button ng-click="checkf()" class="btn-info">Check If Too Much</button>
-  <div ng-controller="mycontrol"><p ng-bind="name">{{name}}</p></div>
+  <div ng-controller="mycontrol"><p ng-bind="name"></p></div>
 <h3>Note: </h3><p> We do not consider an empty item, i.e., , , as an item</p>
 </div>
   </body>
